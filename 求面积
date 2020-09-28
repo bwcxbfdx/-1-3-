@@ -1,0 +1,15 @@
+import math
+n = 10
+width =2*math.pi/n
+a =[]
+b =[]
+# 等分0~2*pi之间的区间端点值x
+for i in range(n):
+	a.append(i*width)
+for i in a:
+	b.append(abs(math.sin(i)))
+area = sum(b)*width
+print(area)
+# 列表推导式
+s = [abs(math.sin(i*width))*width for i in range(n)]
+print(s)
