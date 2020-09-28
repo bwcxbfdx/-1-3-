@@ -1,0 +1,23 @@
+#方法一
+list_1=eval(input('请输入列表list_1:'))
+list_2 = list(set(list_1))       #list()方法是把字符串str或元组转成数组
+print (list_2)
+
+#方法二
+list_1=eval(input('请输入列表list_1:'))
+list_2 = list({}.fromkeys(list_1).keys())      #list()方法是把字符串str或元组转成数组
+print (list_2)
+
+#方法三
+list_1=eval(input('请输入列表list_1:'))
+list_2 = []
+for word in list_1:
+    if not word in list_2:
+        list_2.append(word)
+print (list_2)
+
+#方法四
+list_1=eval(input('请输入列表list_1:'))
+list_2 = list(set(list_1))
+list_2.sort(key=list_1.index)
+print (list_2)
