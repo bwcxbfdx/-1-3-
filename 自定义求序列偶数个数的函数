@@ -1,0 +1,8 @@
+def double_count(x):
+    sum=0
+    for i in x:
+        if i%2==0:
+            sum=sum+1
+    return sum
+res=double_count(eval(str(input('[输入：]'))))
+print(res)
